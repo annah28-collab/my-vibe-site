@@ -25,6 +25,15 @@ html {
   font-size: 16px;
 }
 
+.project-credit {
+  text-align: center;
+  padding: 1rem 1.5rem 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
 body {
   font-family: "DM Sans", system-ui, sans-serif;
   background: var(--bg);

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Capitals Weather</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <h1>World Capitals Weather</h1>
+      <p class="subtitle">Live conditions in major capital cities</p>
+    </div>
+    <div class="header-actions">
+      <button type="button" id="refresh-btn" class="btn" aria-label="Refresh weather data">
+        <span class="btn-icon" aria-hidden="true">↻</span>
+        Refresh
+      </button>
+      <p id="last-updated" class="last-updated" aria-live="polite"></p>
+    </div>
+  </header>
+
+  <main>
+    <div id="loading" class="loading" role="status">
+      <div class="spinner" aria-hidden="true"></div>
+      <p>Loading weather data…</p>
+    </div>
+
+    <div id="error" class="error hidden" role="alert">
+      <p>Could not load weather data. Check your connection and try again.</p>
+      <button type="button" id="retry-btn" class="btn">Try again</button>
+    </div>
+
+    <section id="weather-grid" class="weather-grid hidden" aria-label="Weather by capital city"></section>
+  </main>
+
+  <footer class="footer">
+    <p>Data from <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
